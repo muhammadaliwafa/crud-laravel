@@ -6,6 +6,7 @@
         <tr>
             <th>No</th>
             <th>Pertanyaan</th>
+            <th>Action</th>
             
         </tr>
         </thead>
@@ -14,6 +15,9 @@
                 <tr>
                     <td>{{$key + 1}}</td>
                     <td>{{$item->pertanyaan}}</td>
+                    <td>
+                        <a href="/jawaban/{{$item->id}}">lihat jawaban</a>
+                    </td>
                 </tr>
             @endforeach
         </tbody>
