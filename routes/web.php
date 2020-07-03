@@ -11,13 +11,15 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
 
 Route::get('/', function () {
     return view('table.table');
 });
+
+Route::get('/items', 'ItemController@index');
+Route::get('/items/create', 'ItemController@create');
+Route::post('/items', 'ItemController@store');
 
 Route::get('/data-tables', function () {
     return view('table.data-tables');
