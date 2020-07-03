@@ -9,12 +9,10 @@
                 <textarea type="text" class="form-control" placeholder="Enter your question" name="pertanyaan" id="question"></textarea>
             </div>
             <div class="form-group form-check">
-            <label class="form-check-label">
-                <input class="form-check-input" type="checkbox"> Remember me
-            </label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <a href="/pertanyaan" class="btn btn-primary mt-3">kembali</a>
 
     </div>
 

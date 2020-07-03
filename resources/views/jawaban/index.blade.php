@@ -29,6 +29,7 @@
             <input type="hidden" name="pertanyaan_id" value={{$pertanyaan_id}}>
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
+        <a href="/pertanyaan" class = "btn btn-primary mt-3">question list</a>
     </div>
 
 @endsection

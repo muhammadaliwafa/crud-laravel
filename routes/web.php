@@ -14,7 +14,7 @@
 
 
 Route::get('/', function () {
-    return view('table.table');
+    return view('items.index');
 });
 
 Route::get('/items', 'ItemController@index');
