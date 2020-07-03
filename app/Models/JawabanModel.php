@@ -15,7 +15,9 @@ class JawabanModel{
         return $new_item;
     }
 
-    // public static get_answer($pertanyaan_id){
+    public static function get_answer_by_id($pertanyaan_id){
+        $new_item = DB::table('jawaban')->where('pertanyaan_id', $pertanyaan_id)->get();
+        return $new_item;
+    }
 
-    // }
 }
