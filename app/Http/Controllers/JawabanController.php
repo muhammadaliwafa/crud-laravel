@@ -24,14 +24,14 @@ class JawabanController extends Controller
         // dd($items);
         return view('jawaban.index', compact('items', 'id'));
     }
-    public function store(Request $request){
+    public function store($pertanyaan_id, Request $request){
         // dd($request->all());
         $data = $request->all();
         // dd($data);
         unset($data["_token"]);
         $item = JawabanModel::save($data);
         if($item){
-            return redirect('/pertanyaan');
+            return redirect("/jawaban/$pertanyaan_id");
         }
 
     }

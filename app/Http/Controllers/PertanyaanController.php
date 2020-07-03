@@ -8,9 +8,9 @@ use App\Models\PertanyaanModel;
 class PertanyaanController extends Controller
 {
     //
-    public function index($id){
+    public function index(){
         $items = PertanyaanModel::get_all();
-        dd($id);
+        // dd($id);
         return view('pertanyaan.index', compact('items'));
     }
 
@@ -25,6 +25,7 @@ class PertanyaanController extends Controller
         unset($data["_token"]);
         $item = PertanyaanModel::save($data);
         if($item){
+            
             return redirect('/pertanyaan');
         }
 
