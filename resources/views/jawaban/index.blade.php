@@ -2,6 +2,7 @@
 
 @section('content')
     <table class="table">
+    <h1>Jawaban pertanyaan dengan id pertanyaan : {{$id}}</h1>
         <thead>
         <tr>
             <th>No</th>
