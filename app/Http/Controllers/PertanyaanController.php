@@ -8,9 +8,9 @@ use App\Models\PertanyaanModel;
 class PertanyaanController extends Controller
 {
     //
-    public function index(){
+    public function index($id){
         $items = PertanyaanModel::get_all();
-        // dd($items);
+        dd($id);
         return view('pertanyaan.index', compact('items'));
     }
 

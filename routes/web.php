@@ -25,10 +25,15 @@ Route::get('/pertanyaan', 'PertanyaanController@index');
 Route::get('/pertanyaan/create', 'PertanyaanController@create');
 Route::post('/pertanyaan', 'PertanyaanController@store');
 
-Route::get('/jawaban/{pertanyaan_id}', function($pertanyaan_id){
-    return view('test', ['angka' => $pertanyaan_id]);
-});
+// Route::get('/jawaban/{pertanyaan_id}', function($pertanyaan_id){
+//     return view('jawaban.formJawaban', ['pertanyaan_id' => $pertanyaan_id]);
+// });
+Route::get('/jawaban/{pertanyaan_id}', 'JawabanController@index');
 
-Route::get('/data-tables', function () {
-    return view('table.data-tables');
-});
+// Route::post('/jawaban/{pertanyaan_id}', function($pertanyaan_id){
+//     return view('jawaban.formJawaban', ['pertanyaan_id' => $pertanyaan_id]);
+// });
+
+// Route::get('/data-tables', function () {
+//     return view('table.data-tables');
+// });

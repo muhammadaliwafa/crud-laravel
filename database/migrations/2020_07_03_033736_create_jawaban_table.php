@@ -16,6 +16,7 @@ class CreateJawabanTable extends Migration
         Schema::create('jawaban', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('jawaban')->nullable();
+            $table->string('pertanyaan_id')->nullable();
             $table->timestamps();
         });
     }

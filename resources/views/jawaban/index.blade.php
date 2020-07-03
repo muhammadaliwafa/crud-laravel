@@ -6,13 +6,14 @@
         <tr>
             <th>No</th>
             <th>Jawaban</th>
+            
         </tr>
         </thead>
         <tbody>
             @foreach($items as $key => $item)
                 <tr>
                     <td>{{$key + 1}}</td>
-                    <td>{{$item->name}}</td>
+                    <td>{{$item->jawaban}}</td>
                 </tr>
             @endforeach
         </tbody>
