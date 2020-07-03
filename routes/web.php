@@ -21,6 +21,14 @@ Route::get('/items', 'ItemController@index');
 Route::get('/items/create', 'ItemController@create');
 Route::post('/items', 'ItemController@store');
 
+Route::get('/pertanyaan', 'PertanyaanController@index');
+Route::get('/pertanyaan/create', 'PertanyaanController@create');
+Route::post('/pertanyaan', 'PertanyaanController@store');
+
+Route::get('/jawaban/{pertanyaan_id}', function($pertanyaan_id){
+    return view('test', ['angka' => $pertanyaan_id]);
+});
+
 Route::get('/data-tables', function () {
     return view('table.data-tables');
 });

@@ -3,17 +3,19 @@
 namespace App\Models;
 use Illuminate\Support\Facades\DB;
 
-class ItemModel{
+class PertanyaanModel{
     public static function get_all(){
-        $items = DB::table('items')->get();
+        $items = DB::table('pertanyaan')->get();
         return $items;
     }
 
     public static function save($data){
-        $new_item = DB::table('items')->insert($data);
+        $new_item = DB::table('pertanyaan')->insert($data);
 
         return $new_item;
     }
 
+    // public static get_answer($pertanyaan_id){
 
+    // }
 }
